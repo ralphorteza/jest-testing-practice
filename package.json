@@ -1,0 +1,20 @@
+{
+  "name": "jest-testing-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ralphorteza/jest-testing-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ralphorteza/jest-testing-practice/issues"
+  },
+  "homepage": "https://github.com/ralphorteza/jest-testing-practice#readme"
+}
