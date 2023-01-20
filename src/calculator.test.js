@@ -155,22 +155,62 @@ test('multiply [1, "a", 3] 4, 5 to be 20', () => {
 //   expect(calculator.div()).toBe();
 // });
 
-test('divide _ to be _', () => {
-  expect(calculator.div()).toBe();
+test('divide 5, 1 to be 5', () => {
+  expect(calculator.div(5, 1)).toBe(5);
 });
 
-test('divide _ to be _', () => {
-  expect(calculator.div()).toBe();
+test('divide 1, 5 to be 0.20', () => {
+  expect(calculator.div(1, 5)).toBe(0.20);
 });
 
-test('divide _ to be _', () => {
-  expect(calculator.div()).toBe();
+test('divide -5 to be 1', () => {
+  expect(calculator.div(-5, 1)).toBe(-5);
 });
 
-test('divide _ to be _', () => {
-  expect(calculator.div()).toBe();
+test('divide 5 to be -1', () => {
+  expect(calculator.div(5, -1)).toBe(-5);
 });
 
-test('divide _ to be _', () => {
-  expect(calculator.div()).toBe();
+test('divide -1 to be 5', () => {
+  expect(calculator.div(-1, 5)).toBe(-0.20);
+});
+
+test('divide 1, 0 to be infinity', () => {
+  expect(calculator.div(1, 0)).toBe(Infinity);
+});
+
+test('divide 3, 9, to be close to 0.33', () => {
+  expect(calculator.div(3, 9)).toBeCloseTo(0.33);
+});
+
+test('divide 6, 9, to be close to 0.67', () => {
+  expect(calculator.div(6, 9)).toBeCloseTo(0.67);
+});
+
+test('divide "1", 5 to be 5', () => {
+  expect(calculator.div("1", 5)).toBe(5);
+});
+
+test('divide "1", "5" to be null', () => {
+  expect(calculator.div("1", "5")).toBe(null);
+});
+
+test('divide 0, 5, to be 0', () => {
+  expect(calculator.div(0, 5)).toBe(0);
+});
+
+test('divide 0, 1, 5, to be 0', () => {
+  expect(calculator.div(0, 1, 5)).toBe(0);
+});
+
+test('divide 1, 0, 5 to be Infinity', () => {
+  expect(calculator.div(1, 0, 5)).toBe(Infinity);
+});
+
+test('divide 0, 5, 1 to be 0', () => {
+  expect(calculator.div(0, 5, 0, 1)).toBe(Infinity);
+});
+
+test('divide 32, "a", 4, [2 ,21] , 2 to be 2', () => {
+  expect(calculator.div(32, "a", 4, [2 ,21] , 2)).toBe(4);
 });

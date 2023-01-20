@@ -11,7 +11,10 @@ const calc = (() => {
   };
 
   const div = function division(...args) {
-
+    const nums = args.filter((arg) => typeof arg === "number");
+    if (nums.length === 0) return null;
+    if (nums.slice(1).some(num => num === 0)) return Infinity;
+    return nums.reduce((accum, current) => (accum / current));
   };
 
   const add = function addition(...args) {
