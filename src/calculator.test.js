@@ -59,14 +59,35 @@ test('add [1,2,3], 4, 5, to be 9', () => {
 });
 
 // Test for calculator subtraction
-test('5 - 2 = 3', () => {
+test('subtract 5, 2 to be 3', () => {
   expect(calculator.sub(5, 2)).toBe(3);
 });
 
-test('0 - 4 = -4', () => {
+test('subtract 0, 4 to be -4', () => {
   expect(calculator.sub(0, 4)).toBe(-4);
 });
 
-test('-1 - 2 = -3', () => {
+test('subtract -2 to be -3', () => {
   expect(calculator.sub(-1, 2)).toBe(-3);
+});
+
+test('subtract 1 to be 1', () => {
+  expect(calculator.sub(1)).toBe(1);
+});
+
+test('subtract "2", 1 to be 1', () => {
+  expect(calculator.sub("2", 1)).toBe(1);
+});
+
+test('subtract "2","1" to be null', () => {
+  expect(calculator.sub("2", "1")).toBe(null);
+});
+
+
+test('subtract 4, 2, 1 to be 1' , () => {
+  expect(calculator.sub(4, 2, 1)).toBe(1);
+});
+
+test('subtract -4, -2, -1 to be -1' , () => {
+  expect(calculator.sub(-4, -2, -1)).toBe(-1);
 });
