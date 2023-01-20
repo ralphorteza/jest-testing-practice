@@ -3,7 +3,15 @@ const calc = (() => {
   const mul = function multiply(...args) {
     const nums = args.filter((arg) => typeof arg === "number");
     if (nums.length === 0) return null;
+    if (nums.some(num => num === 0)) {
+      console.log('0 in nums!'); 
+      return 0;
+    }
     return nums.reduce((accum, current) => (accum * current));
+  };
+
+  const div = function division(...args) {
+
   };
 
   const add = function addition(...args) {
@@ -23,6 +31,8 @@ const calc = (() => {
   };
 
   return {
+    mul,
+    div,
     add,
     sub,
   };

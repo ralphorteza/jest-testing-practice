@@ -91,3 +91,86 @@ test('subtract 4, 2, 1 to be 1' , () => {
 test('subtract -4, -2, -1 to be -1' , () => {
   expect(calculator.sub(-4, -2, -1)).toBe(-1);
 });
+
+
+// Tests for multiply.
+// test('multiply _ to be _', () => {
+//   expect(calculator.mul()).toBe();
+// });
+test('multiply 1, 1 to be 1', () => {
+  expect(calculator.mul(1, 1)).toBe(1);
+});
+
+test('multiply 1, 5 to be 5', () => {
+  expect(calculator.mul(1, 5)).toBe(5);
+});
+
+test('multiply -1, 5 to be -5', () => {
+  expect(calculator.mul(-1, 5)).toBe(-5);
+});
+
+test('multiply 1, -5 to be -5', () => {
+  expect(calculator.mul(1, -5)).toBe(-5);
+});
+
+test('multiply -1, -5 to be 5', () => {
+  expect(calculator.mul(-1, -5)).toBe(5);
+});
+
+test('multiply 0, 5 to be 0', () => {
+  expect(calculator.mul(0, 5)).toBe(0);
+});
+
+test('multiply 5, 0 to be 0', () => {
+  expect(calculator.mul(5, 0)).toBe(0);
+});
+
+test('multiply 3, 4, 5 to be 60', () => {
+  expect(calculator.mul(3, 4, 5)).toBe(60);
+});
+
+test('multiply 3, -4, 5 to be -60', () => {
+  expect(calculator.mul(3, -4, 5)).toBe(-60);
+});
+
+test('multiply 3, -4, -5 to be 60', () => {
+  expect(calculator.mul(3, -4, -5)).toBe(60);
+});
+
+test('multiply 3, -4, 0 to be 0', () => {
+  expect(calculator.mul(3, -4, 0)).toBe(0);
+});
+
+test('multiply 3, "4", 5 to be 15', () => {
+  expect(calculator.mul(3, "4", 5)).toBe(15);
+});
+
+test('multiply [1, "a", 3] 4, 5 to be 20', () => {
+  expect(calculator.mul([1, "a", 3], 4, 5)).toBe(20);
+});
+
+
+// Tests for division.
+// test('divide _ to be _', () => {
+//   expect(calculator.div()).toBe();
+// });
+
+test('divide _ to be _', () => {
+  expect(calculator.div()).toBe();
+});
+
+test('divide _ to be _', () => {
+  expect(calculator.div()).toBe();
+});
+
+test('divide _ to be _', () => {
+  expect(calculator.div()).toBe();
+});
+
+test('divide _ to be _', () => {
+  expect(calculator.div()).toBe();
+});
+
+test('divide _ to be _', () => {
+  expect(calculator.div()).toBe();
+});
