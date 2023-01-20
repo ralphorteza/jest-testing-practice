@@ -4,6 +4,7 @@ const calculator = require('./calculator');
 //   expect(calculator()).toBe();
 // });
 
+// Tests for calculator addition.
 test('add 1 and 2 to be 3', () => {
   expect(calculator.add(1,2)).toBe(3);
 });
@@ -55,4 +56,17 @@ test('add "a", "!", 4, "seven", 3, "3" to be 7', () => {
 
 test('add [1,2,3], 4, 5, to be 9', () => {
   expect(calculator.add([1,2,3], 4, 5)).toBe(9);
+});
+
+// Test for calculator subtraction
+test('5 - 2 = 3', () => {
+  expect(calculator.sub(5, 2)).toBe(3);
+});
+
+test('0 - 4 = -4', () => {
+  expect(calculator.sub(0, 4)).toBe(-4);
+});
+
+test('-1 - 2 = -3', () => {
+  expect(calculator.sub(-1, 2)).toBe(-3);
 });
