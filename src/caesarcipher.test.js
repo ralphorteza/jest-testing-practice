@@ -22,6 +22,14 @@ test('"A" to be "b"', () => {
   expect(caesarCipher.encrypt("A")).toBe("b");
 });
 
-test('"abc" to be "bcd', () => {
+test('"abc" to be "bcd"', () => {
   expect(caesarCipher.encrypt("abc")).toBe("bcd");
+});
+
+test('"attack at dawn" to be "fyyfhp fy ifbs"', () => {
+  expect(caesarCipher.encrypt("attack at dawn")).toBe("buubdl bu ebxo");
+});
+
+test('"Attack @ dawn." to be "fyyfhp @ ifbs."', () => {
+  expect(caesarCipher.encrypt("Attack @ dawn.")).toBe("buubdl @ ebxo.");
 });

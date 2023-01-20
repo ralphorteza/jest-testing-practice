@@ -1,13 +1,22 @@
 const caesarCipher = function caesarCipherEncrypt() {
 
-  const alterChar = function alterCharacter(char, encryptedStrArray) {
-    let currCharacter = char;
-    let currCharacterCode = char.charCodeAt(0);
-    let alteredCharCode = currCharacterCode + 1;
-    encryptedStrArray.push(String.fromCharCode(alteredCharCode));
-    console.log(`current char: ${currCharacter}, alteredCharCode: ${alteredCharCode}, char code: ${currCharacterCode}`);
-    console.log(`current array: ${encryptedStrArray}`);
-  }
+  const encryptHandler = function handlerForEncrypt(char, encryptedArr) {
+    const specialChars = /[$&+,:;=?@#|'<>.^*()%!-\s]/;
+    if (char.match(specialChars)) {
+      console.log('inside if statement!');
+      encryptedArr.push(String.fromCharCode(char.charCodeAt(0)));
+      return;
+    }
+    if (char === /z/) {
+      encryptedArr.push('a')
+      return;
+    }
+
+    let charCode = Number(char.charCodeAt(0));
+    charCode += 1;
+
+    encryptedArr.push(String.fromCharCode(charCode));
+  };
 
   const encrypt = function encryptString(str) {
     if (str === null) return null;
@@ -15,22 +24,10 @@ const caesarCipher = function caesarCipherEncrypt() {
 
     const processedStr = str.trim().toLowerCase();
     const charArray = [...processedStr];
-    let encryptedStrArray = [];
-    console.log(`initial array: ${encryptedStrArray}`);
-    charArray.forEach((char) => {
-      if (char !== /[a-z]/) {
-        encryptedStrArray.push(char);
-        return;
-      } 
-      if (char === /z/) {
-        encryptedStrArray.push('a')
-        return;
-      }
+    const encryptedArr = [];
+    charArray.forEach((char) =>  encryptHandler(char, encryptedArr));
 
-      alterChar(char, encryptedStrArray);
-    });
-
-    return encryptedStrArray.join('');
+    return encryptedArr.join('');
   } 
 
   return {
