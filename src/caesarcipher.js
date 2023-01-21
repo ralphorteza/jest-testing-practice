@@ -7,7 +7,6 @@ const caesarCipher = function caesarCipherEncrypt() {
     const capitalChars = /[A-Z]/;
 
     if (!char.match(alphaChars)) {
-      console.log('inside if statement!');
       encryptedArr.push(String.fromCharCode(char.charCodeAt(0)));
       return;
     }
